@@ -27,18 +27,24 @@
 
 .ad-container {
   position: relative;
+  width: 100%;
+  height: 300px;
 }
-
+  
 .ad {
   position: fixed;
   width: auto;
-  height: 30px;
+  height: 300;
 }
 
 .ad-left {
   left: 0;
+  top: 50%;
+  margin-top: -150px;
 }
 
 .ad-right {
   right: 0;
+  top: 50%;
+  margin-top: -150px;
 }
