@@ -22,7 +22,24 @@
   margin-top: -300px;
   width: 30vh;
 }
+
+.hidden {
+  display: none;
+}
 </style>
+<script is:inline>
+var ua = navigator.userAgent;
+var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+isIphone =!ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+isMobile = isIphone || isAndroid;
+var adBox = document.getElementsByClassName('ad-container');  
+
+//判断
+if(isMobile){
+   adBox[0].classList.add('hidden');
+}
+</script>
 <div class="ad-container">
   <div class="ad ad-left"><a href="https://www.changan.com.cn" target="_blank"><img src="/196451678187989.jpg"/></a></div>
   <!-- 左侧广告位 -->
