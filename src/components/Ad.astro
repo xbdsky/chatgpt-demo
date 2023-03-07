@@ -32,7 +32,7 @@ var ua = navigator.userAgent;
 var isIpad = ua.match(/(iPad).*OS\s([\d_]+)/),
 isIphone = ua.match(/(iPhone\sOS)\s([\d_]+)/),
 isAndroid = ua.match(/(Android)\s+([\d.]+)/),
-isMobile = isIphone || isIpad || isAndroid;
+isMobile = isIpad || isIphone || isAndroid;
 var adBox = document.getElementsByClassName('ad-container');  
 
 if (isMobile) {
