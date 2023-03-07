@@ -36,11 +36,11 @@ isMobile = isIpad || isIphone || isAndroid;
 var adBox = document.getElementById('ad-box');
 
 if (isMobile) {
-  adBox.style.display = 'none';
+  document.getElementById('ad-box').style.display = 'none';
 }
 
 if (window.screen.width < 300) {
-  adBox.style.display = 'none';
+  document.getElementById('ad-box').style.display = 'none';
 }
 </script>
 <div id="ad-box" class="ad-container">
