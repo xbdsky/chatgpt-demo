@@ -26,6 +26,12 @@
 .hidden {
   display: none;
 }
+<div id="ad-box" class="ad-container">
+  <div class="ad ad-left"><a href="https://www.changan.com.cn" target="_blank"><img src="/196451678187989.jpg"/></a></div>
+  <!-- 左侧广告位 -->
+  <div class="ad ad-right"><a href="https://www.changan.com.cn" target="_blank"><img src="/196451678187989.jpg"/></a></div>
+  <!-- 右侧广告位 -->
+</div>
 </style>
 <script is:inline>
 var ua = navigator.userAgent;
@@ -36,16 +42,10 @@ isMobile = isIpad || isIphone || isAndroid;
 var adBox = document.getElementById('ad-box');
 
 if (isMobile) {
-  document.getElementById('ad-box').style.display = 'none';
+  adBox.style.display = 'none';
 }
 
 if (window.screen.width < 300) {
-  document.getElementById('ad-box').style.display = 'none';
+  adBox.style.display = 'none';
 }
 </script>
-<div id="ad-box" class="ad-container">
-  <div class="ad ad-left"><a href="https://www.changan.com.cn" target="_blank"><img src="/196451678187989.jpg"/></a></div>
-  <!-- 左侧广告位 -->
-  <div class="ad ad-right"><a href="https://www.changan.com.cn" target="_blank"><img src="/196451678187989.jpg"/></a></div>
-  <!-- 右侧广告位 -->
-</div>
