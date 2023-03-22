@@ -27,9 +27,34 @@ const { title } = Astro.props;
 		background-color: #171921;
 		color: #ffffff;
 	}
+	html.dark {
+	        --c-bg: #212129;
+	        --c-fg: #ddddf0;
+	        --c-scroll: #333333;
+	        --c-scroll-hover: #555555;
+	}
 	main {
 		max-width: 70ch;
 		margin: 0 auto;
 		padding: 6rem 2rem 4rem;
 	}
 </style>
+	
+<script>
+const initTheme = () => {
+  const darkSchema
+    = window.matchMedia
+    && window.matchMedia('(prefers-color-scheme: dark)').matches
+  const storageTheme = localStorage.getItem('theme')
+  if (storageTheme) {
+    document.documentElement.classList.toggle(
+      'dark',
+      storageTheme === 'dark',
+    )
+  } else {
+    document.documentElement.classList.toggle('dark', darkSchema)
+  }
+}
+
+initTheme()
+</script>
